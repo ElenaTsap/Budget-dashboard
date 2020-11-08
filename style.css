@@ -1,0 +1,348 @@
+body {
+    width: 100vw;
+    height: 100%;
+
+    margin: 0;
+
+    background-color: #f1efef;
+    color: rgb(65, 77, 247);
+    font-family: 'Nunito', sans-serif;
+
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90%;
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: 14% 80%;
+    grid-column-gap: 4%;
+}
+
+/* account section */
+#account {
+    grid-column: 1/2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#avatar, .button {
+    box-shadow:  6px 6px 12px #cdcbcb, 
+    -6px -6px 12px #ffffff;
+
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#avatar{
+    width: 20vmin;
+    height: 20vmin;
+    margin: 40px 0 40px 0;
+
+    border-radius: 50%;
+    background-image: url(./avatar_illu.png);
+}
+
+.button{
+    width: 12vmin;
+    height: 12vmin;
+    margin: 10px 0 40px 0;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#account > div:nth-of-type(3){
+    box-shadow: inset 12px 12px 23px #c8c6c6, 
+    inset -12px -12px 23px #ffffff;
+}
+
+#account > div:nth-of-type(3) > .fas {
+    color: rgb(65, 77, 247);
+}
+
+.fas {
+    font-size: 36px;
+    color: rgb(65, 77, 247);
+}
+
+/* dashboard all */
+
+#dashboard {
+    grid-column: 2/3;
+    height: 90%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 18px;
+    background: #f1efef;
+    box-shadow: inset 17px 17px 34px #cdcbcb, inset -17px -17px 34px #ffffff;
+}
+
+h2 {
+    margin: 0 8px 48px 0;
+    display: inline-block;
+    color: black;
+}
+
+h3 {
+    margin-top: 0;
+    font-weight: 400;
+    display: inline-block;
+    color: black;
+}
+    
+/* form section */
+#form-container{
+    width: 90%;
+    height: 100%;
+
+    margin: 40px auto 20px auto;
+}
+
+section {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    width: 35%;
+}
+
+
+span {
+    font-weight: 700;
+}
+
+#date {
+    border: none;
+    color: gray;
+    border-radius: 12px;
+    background: #f1efef;
+    box-shadow: inset 8px 8px 6px #e5e3e3, 
+            inset -8px -8px 6px #fdfbfb;
+    padding: 10px;
+    width: 40%;
+}
+
+input {
+    margin-left: 24px;
+    padding-left: 24px;
+    color: gray;
+}
+
+#amount {
+    border: none;
+    border-radius: 12px;
+    background: #f1efef;
+    box-shadow: inset 8px 8px 6px #e5e3e3, 
+            inset -8px -8px 6px #fdfbfb;
+    padding: 12px;
+    width: 40%;
+}
+
+#cur {
+    width: 64px;
+    padding: 8px;
+    color: rgb(65, 77, 247);
+    border: none;
+    border-radius: 8px;
+    background: #f1efef;
+    box-shadow:  6px 6px 12px #cdcbcb, 
+             -6px -6px 12px #ffffff;
+}
+
+#exp {
+    border: none;
+    border-radius: 12px;
+    background: #f1efef;
+    box-shadow: inset 8px 8px 6px #e5e3e3, 
+            inset -8px -8px 6px #fdfbfb;
+    margin-left: 24px;
+    height: 64px;
+    padding: 10px;
+    width: 40%;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+    outline: none;
+
+    background: url(images/benice.png) center center no-repeat; /* This ruins default border */
+    border: 1px solid #888; 
+}
+
+#type-container, #for-container, #amount-container {
+    display: flex;
+}
+
+button {
+    color: rgb(65, 77, 247);
+    border: none;
+    border-radius: 16px;
+    background: #f1efef;
+    box-shadow:  6px 6px 12px #cdcbcb, 
+             -6px -6px 12px #ffffff;
+    padding: 12px;
+    width: 30%;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+button:active {
+    border: none;
+}
+
+
+/* table section */
+
+#table-container {
+    width: 100%;
+    height: 100%;
+
+    margin: 20px auto;
+    padding-bottom: 30px;
+
+    border-radius: 18px;
+    background: #f1efef;
+    box-shadow:  17px 17px 34px #cdcbcb, -17px -17px 34px #ffffff; 
+}
+
+#table-container > h2 {
+    margin: 5% 8px 0px 5%;
+}
+
+#table-inner {
+    margin: auto;
+    width: 95%;
+    height: 180px;
+
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 92%;
+    height: 10px;
+    margin-top: 16px;
+    border-collapse: collapse;
+}
+
+#table-inner > table > thead > tr > th {
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+#table-inner > table > tbody > tr:nth-of-type(odd) > td {
+    background-color: rgb(233, 233, 233);
+}
+
+/* tablet */
+@media only screen and (max-width: 868px) {
+
+    main {
+        width: 90%;
+        height: 90%;
+    
+        display: grid;
+        grid-template-columns: 0;
+        grid-column-gap: 0%;
+        grid-template-rows: 20% 80%;
+    }
+
+    #dashboard {
+        margin-top: -5%;
+    }
+    
+    /* account section */
+    #account {
+        grid-row: 1/2;
+        grid-column: 2/2;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #avatar{
+        width: 16vmin;
+        height: 16vmin;
+    }
+
+    .button{
+        width: 10vmin;
+        height: 10vmin;
+        margin: 0;
+    }
+
+    .fas {
+        font-size: 5vmin;
+    }
+    
+    #form-container{
+        margin: 5% auto 3% auto;
+    }
+
+    
+    #table-container > h3 {
+        margin: 0% 8px 0px 5%;
+    } 
+}
+
+/* mobile */
+
+@media only screen and (max-width: 600px) {
+
+    h2 {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin-bottom: 24px;
+    }
+
+    form > section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form > section > label {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    input {
+        margin-left:0px; 
+    }
+
+    #date, #type-container, #for-container, #amount-container, #exp {
+        width: 90%;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}

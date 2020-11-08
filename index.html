@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/dc3beb17c2.js" crossorigin="anonymous"></script>
+
+    <script async src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        
+        <section id="account">
+            <div id="avatar"></div>
+
+            <div class="button"><i class="fas fa-calendar-alt"></i></div>
+            <div class="button"><i class="fas fa-wallet"></i></div>
+            <div class="button"><i class="fas fa-list-ul"></i></div>
+            <div class="button"><i class="fas fa-apple-alt"></i></i></div>
+            <div class="button"><i class="fas fa-cog"></i></div>
+
+        </section>
+        <section id="dashboard">
+            <div id="form-container">
+                <h2>Wallet Tracker</h2>
+                <h3>add your daily transactions</h3>
+                <form onsubmit="addToTable(event)">
+
+                    <section id="date-section">
+                        <label for="date-section"><span>Step 1:</span> enter the transaction date</label>
+                        <input type="date" id="date" min="1900-01-01" max="2000-12-31">
+                    </section>
+
+                    <section id="type-section">
+                        <label for="type"><span>Step 2:</span> choose the transaction type</label>
+
+                        <div id="type-container">
+                            <input type="radio" id="income" name="type" value="income">
+                            <label for="income">Income</label><br>
+                            <input type="radio" id="outcome" name="type" value="expense">
+                            <label for="expense">Expense</label><br>
+                        </div>
+                    </section>
+
+                    <section id="for-section">
+                        <label for="for"><span>Step 3:</span> select the people involved </label>
+                        <div id="for-container">
+                            <input type="checkbox" id="myself" name="self" value="self">
+                            <label for="self"> Myself</label><br>
+                            <input type="checkbox" id="family" name="family" value="family">
+                            <label for="family"> Family</label><br>
+                            <input type="checkbox" id="friend" name="friends" value="friends">
+                            <label for="friends"> Friends</label>
+                        </div>
+                    </section> 
+
+                    <section id="amount-section">
+                        <label for="amount"><span>Step 4:</span> add the amount and the currency </label>
+                        <div id="amount-container">
+                            <input type="number" name="amount" id="amount" placeholder="amount">
+                            
+                            <select name="currencies" id="cur">
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                                <option value="gbp">GBP</option>
+                                <option value="pln">PLN</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section id="notes-section">
+                        <label for="notes"><span>Step 5:</span> add some notes </label>
+                        <textarea name="notes" id="exp" placeholder="add your notes"></textarea>
+                    </section>
+                    
+                    <button>Add to list</button>
+                </form>
+            </div>
+            <div id="table-container">
+                <h2>Your budget's history</h2><h3>what's in - what's out</h3>
+                
+                <div id="table-inner">
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>For</th>
+                            <th>Amount</th>
+                            <th>Notes</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody id="data">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
