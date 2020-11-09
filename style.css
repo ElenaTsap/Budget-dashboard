@@ -26,7 +26,7 @@ main {
 /* account section */
 #account {
     grid-column: 1/2;
-    
+
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -236,7 +236,6 @@ button:active {
     width: 95%;
     height: 180px;
 
-    overflow: scroll;
     display: flex;
     justify-content: center;
 }
@@ -246,6 +245,16 @@ table {
     height: 10px;
     margin-top: 16px;
     border-collapse: collapse;
+}
+
+/* in order to make the head stick */
+thead, tbody {
+    display: block;
+}
+
+tbody {
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #table-inner > table > thead > tr > th {
@@ -348,4 +357,34 @@ table {
     button {
         width: 100%;
     }
+}
+
+/* animations */
+
+input:focus {
+    outline: none;
+}
+
+
+#date{
+    transition: background-color 1s;
+}
+
+#date:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+#date:focus {
+    background-color: rgb(65, 77, 247, 0.2);
+}
+
+#type-container > input, #type-container > label,  #for-section > div > input, #for-section > div > label {
+    color: grey;
+    transition: .5s;
+}
+
+#type-container > input:hover, #type-container > label:hover, #for-section > div > input:hover, #for-section > div > label:hover {
+    color: rgb(65, 77, 247);
+    font-size: larger;
+    height: 20px;
 }
