@@ -26,7 +26,7 @@ main {
 /* account section */
 #account {
     grid-column: 1/2;
-    height: 100vh;
+    
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -45,8 +45,8 @@ main {
 }
 
 #avatar{
-    width: 12vmin;
-    height: 12vmin;
+    width: 100px;
+    height: 100px;
     margin: 40px 0 40px 0;
 
     border-radius: 50%;
@@ -54,8 +54,8 @@ main {
 }
 
 .button{
-    width: 8vmin;
-    height: 8vmin;
+    width: 80px;
+    height: 80px;
     margin: 10px 0 40px 0;
 
     border-radius: 18px;
