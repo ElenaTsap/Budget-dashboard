@@ -145,6 +145,7 @@ span {
 input {
     margin-left: 24px;
     padding-left: 24px;
+    margin-top: 6px;
     color: gray;
 }
 
@@ -366,25 +367,34 @@ input:focus {
 }
 
 
-#date{
+#date, #amount, #exp{
     transition: background-color 1s;
 }
 
-#date:hover {
+#date:hover, #amount:hover, #exp:hover {
     background-color: rgb(224, 224, 224);
 }
 
-#date:focus {
+#date:focus, #amount:focus, #exp:focus {
     background-color: rgb(65, 77, 247, 0.2);
 }
 
-#type-container > input, #type-container > label,  #for-section > div > input, #for-section > div > label {
+#type-container > label, #for-section > div > label {
     color: grey;
     transition: .5s;
 }
 
-#type-container > input:hover, #type-container > label:hover, #for-section > div > input:hover, #for-section > div > label:hover {
+
+#type-container > label:hover, #for-section > div > label:hover   {
     color: rgb(65, 77, 247);
     font-size: larger;
-    height: 20px;
 }
+
+#type-container > input:hover + label, #for-section > div > input:hover + label  {
+    color: rgb(65, 77, 247);
+    font-size: larger;
+}
+
+
+
+
