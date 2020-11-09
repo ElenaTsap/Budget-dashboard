@@ -239,6 +239,8 @@ button:active {
 
     display: flex;
     justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 table {
@@ -249,14 +251,14 @@ table {
 }
 
 /* in order to make the head stick */
-thead, tbody {
+/* thead, tbody {
     display: block;
 }
 
 tbody {
     overflow-y: auto;
     overflow-x: hidden;
-}
+} */
 
 #table-inner > table > thead > tr > th {
     padding-bottom: 20px;
@@ -362,10 +364,10 @@ tbody {
 
 /* animations */
 
-input:focus {
+
+input:focus, button:focus {
     outline: none;
 }
-
 
 #date, #amount, #exp{
     transition: background-color 1s;
@@ -384,7 +386,6 @@ input:focus {
     transition: .5s;
 }
 
-
 #type-container > label:hover, #for-section > div > label:hover   {
     color: rgb(65, 77, 247);
     font-size: larger;
@@ -393,8 +394,28 @@ input:focus {
 #type-container > input:hover + label, #for-section > div > input:hover + label  {
     color: rgb(65, 77, 247);
     font-size: larger;
+} 
+
+/* bulent's code */
+
+/* #type-container > input:hover, #type-container > input:hover + label {
+    color: rgb(65, 77, 247);
+    transform: scale(1.2)
+} */
+
+button {
+    transition: 1s;
+    transition-timing-function: linear;
+}
+
+button:hover {
+    width: 100%
 }
 
 
+#avatar:hover, .button:hover {
+    transform: rotate(-10deg);
+    transform: scale(1.1) rotate(-10deg);
+}
 
 
